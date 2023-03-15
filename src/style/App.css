@@ -1,4 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway:wght@100&family=Roboto:wght@500&display=swap');
+
 *{
   margin: 0;
   padding: 0;
+}
+
+body{
+  background-color: #130626;
+  color: aliceblue;
+}
+
+a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+a:visited{
+  color: aliceblue;
+}
+
+header{
+  padding: 7px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .logo{
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+header .logo .icon{
+  font-size: 40px;
+}
+
+Header .logo .title {
+  display: flex;
+  gap:2px;
+}
+
+Header .logo .title span{
+  border-radius: 20PX 5px 20px 5px;
+  padding: 2px 7px;
+  background-color: #990FBF;
+}
+
+header .iconDeco{
+  font-size: 50px;
+  transition: 500ms;
+}
+
+header .iconDeco:hover{
+  transform: scale(1.25);
+  color: blueviolet;
+}
+
+header nav {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  display: flex;
+  gap:15px;
+}
+
+header nav .link{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+header nav .link.active {
+  color: #990FBF;
+  text-shadow: 0.5px 0.5px white;
+  border-bottom: 2px solid #990FBF;
 }
