@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import { MdTheaters, MdBookmarks } from "react-icons/md";
-import { CiMonitor, CiYoutube } from "react-icons/ci";
+import {  MdBookmarks } from "react-icons/md";
+
 export function Logo() {
   return (
       <Link to="/" className="logo">

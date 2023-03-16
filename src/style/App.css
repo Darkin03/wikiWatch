@@ -76,3 +76,64 @@ header nav .link.active {
   text-shadow: 0.5px 0.5px white;
   border-bottom: 2px solid #990FBF;
 }
+
+
+footer{
+  padding: 10px 7px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+footer .text{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+footer .text .icon{
+  transition: 500ms;
+  transform: scale(1.5);
+}
+
+footer .text .icon:hover{
+  color: #990FBF;
+  transform: scale(2);
+}
+
+footer .info {
+  padding: 7px 10px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+footer .info .image img{
+  height: 200px;
+  width: 200px;
+}
+
+footer .info .links{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+footer .info .links .icons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+footer .info .links .icons .icon{
+  font-size: 36px;
+  transition: 500ms;
+}
+
+footer .info .links .icons .icon:hover{
+  transform: scale(1.25);
+  color: #990FBF;
+}
