@@ -15,7 +15,7 @@ export function WebEnd(){
                     <CiMail/>
                 </div>
             </div>
-            <p>You can wear the code of this app! </p>
+            <p>You can wear the code of this app!  sjsjsjssssj</p>
         </footer>
     )
 }
