@@ -1,0 +1,38 @@
+.movies{
+    padding: 30px 7px;
+}
+
+.latestMovie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.latestMovie .imageContainer{
+    perspective: 700px;
+}
+
+.latestMovie .imageContainer img{
+    width:300px;
+    height: 300px;
+    transform: rotateY(45deg);
+}
+
+.latestMovie .info{
+    width: 400px;
+    text-align: justify;
+}
+
+.latestMovie .info .notes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.latestMovie .info .notes .note{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}

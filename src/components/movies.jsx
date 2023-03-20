@@ -1,7 +1,9 @@
+import { LatestMovie } from "./latestMovie"
+
 export function Movies(){
     return(
-        <div>
-            <h1>Movies!</h1>
-        </div>
+        <section className="movies">
+            <LatestMovie/>
+        </section>
     )
 }
