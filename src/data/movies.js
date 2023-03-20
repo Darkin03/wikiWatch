@@ -76,5 +76,3 @@ export const inTheatresMovies = await getMovies(links.inTheatres);
 export const summaryInTheatresMovies = await getSummaryMovies(links.inTheatres);
 export const upComingMovies = await getMovies(links.upComing);
 export const summaryUpComingMovies = await getSummaryMovies(links.upComing);
-
-
