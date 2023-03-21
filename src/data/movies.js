@@ -22,7 +22,8 @@ async function getLatestMovie(link) {
       poster_path: response.data.poster_path,
       popularity: response.data.popularity,
       vote_average: response.data.vote_average,
-      vote_count: response.data.vote_average
+      vote_count: response.data.vote_average,
+      genres: response.data.genres,
     }
     return moviesLatest;
   } catch (error) {

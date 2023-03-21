@@ -22,6 +22,9 @@
 .latestMovie .info{
     width: 400px;
     text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
 .latestMovie .info .notes{
@@ -35,4 +38,16 @@
     display: flex;
     align-items: center;
     gap: 7px;
+}
+
+.latestMovie .info .genresInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.latestMovie .info .genresInfo .genresContainer{
+    display: flex;
+    flex: wrap;
+    gap: 16px;
 }
