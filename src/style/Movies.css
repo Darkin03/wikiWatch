@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
 .movies{
     padding: 30px 7px;
 }
@@ -7,16 +14,23 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .latestMovie .imageContainer{
+    display: flex;
+    align-items: center;
     perspective: 700px;
 }
 
 .latestMovie .imageContainer img{
-    width:300px;
-    height: 300px;
+    width:350px;
+    height: 350px;
     transform: rotateY(45deg);
+    box-shadow: 1px 1px 60px #990FBF,
+                1px 1px 10px rgba(240, 248, 255, 0.295)
+    ;
 }
 
 .latestMovie .info{
@@ -25,6 +39,34 @@
     display: flex;
     flex-direction: column;
     gap: 7px;
+}
+
+.latestMovie .info header{
+    background-image: linear-gradient(45deg, #990FBF 20%, #5204BF 100%);
+    border-radius: 10px;
+    font-size: 36px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.latestMovie .info .titleContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+    flex-basis: auto;
+}
+
+.latestMovie .info .title{
+    font-family: 'Bebas Neue', cursive;
+    color:rgb(252, 76, 222);
+    font-size: 25px;
+    
+}
+
+.latestMovie .info .genre{
+    background-image: linear-gradient(45deg, #990FBF 20%, #5204BF 100%);
+    padding: 3px 7px;
+    border-radius: 7px;
 }
 
 .latestMovie .info .notes{
@@ -40,6 +82,18 @@
     gap: 7px;
 }
 
+.latestMovie .info .notes .note .icon{
+    border-radius: 100%;
+    background: linear-gradient(45deg, #5204BF 9%, #990FBF 54%);
+    font-size: 40px;
+}
+
+.latestMovie .info .notes .note .text{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 .latestMovie .info .genresInfo{
     display: flex;
     flex-direction: column;
@@ -50,4 +104,10 @@
     display: flex;
     flex: wrap;
     gap: 16px;
+}
+
+.latestMovie .info .genresInfo .genresContainer .genre{
+    background-color: #5204BF;
+    padding: 3px 7px;
+    border-radius: 16px;
 }
