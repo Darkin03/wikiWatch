@@ -7,6 +7,9 @@ import { CiStar, CiRead, CiMedal } from "react-icons/ci";
 //import image
 import cinePhoto from "../images/pexels-tima-miroshnichenko-7991378.jpg";
 
+
+
+
 export function LatestMovie() {
   return (
     <section className="latestMovie">
@@ -19,8 +22,9 @@ export function LatestMovie() {
           }
         />
       </div>
+
       <article className="info">
-        <header>New Movie!</header>
+      <header>New Movie!</header>
         <div className="titleContainer">
           <h1 className="title">{latestMovie.title}</h1>
           {latestMovie.adult ? (
@@ -54,16 +58,17 @@ export function LatestMovie() {
           </div>
         </div>
         <section className="genresInfo">
-          <h1>Geners</h1>
-          <div className="genresContainer">
-            {latestMovie.genres.length === 0 ? (
+        <h1>Geners</h1>
+        <div className="genresContainer">
+          {
+            (latestMovie.genres.length === 0)?
               <span className="genre">No geners defined</span>
-            ) : (
-              latestMovie.genres.map((genre) => (
-                <span className="genre">{genre}</span>
-              ))
-            )}
-          </div>
+              : 
+              latestMovie.genres.map((genre) => {
+                <span className="genre" >{genre}</span>
+              })
+          }
+        </div>
         </section>
       </article>
     </section>

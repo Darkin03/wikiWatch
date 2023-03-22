@@ -1,5 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { CiApple } from "react-icons/ci";
 //import components
 import { Navegator } from "./components/nav";

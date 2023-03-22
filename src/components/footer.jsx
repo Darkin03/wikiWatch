@@ -11,7 +11,7 @@ export function WebEnd() {
             
         </div>
         <div className="links">
-          <h1>Contacts!</h1>
+          <h1 className="title">Contacts!</h1>
           <div className= "icons">
             <a href="https://www.linkedin.com/in/esnaideror/"><CiLinkedin className="icon"/></a>
             <a href="https://github.com/Darkin03/"><AiFillGithub className="icon"/></a>
@@ -21,6 +21,11 @@ export function WebEnd() {
         </div>
       </div>
 
+      <a className="repository" href="https://github.com/Darkin03/wikiWatch">
+        <p>You can find the code of this app in Github</p> 
+        <AiFillGithub className="icon"/>
+      </a>
+        
     </footer>
   );
 }

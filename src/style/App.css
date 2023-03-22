@@ -89,28 +89,16 @@ header{
 
 
 footer{
-  padding: 10px 7px;
+  background-image: radial-gradient(circle, #990FBF 0%, #130626 97%);
+  padding: 15px 7px;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 7px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-footer .text{
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-}
 
-footer .text .icon{
-  transition: 500ms;
-  transform: scale(1.5);
-}
-
-footer .text .icon:hover{
-  color: #990FBF;
-  transform: scale(2);
-}
 
 footer .info {
   padding: 7px 10px;
@@ -131,6 +119,10 @@ footer .info .links{
   justify-content: center;
 }
 
+footer .info .links .title{
+  font-family: 'Bebas Neue', cursive;
+}
+
 footer .info .links .icons{
   display: flex;
   flex-wrap: wrap;
@@ -145,5 +137,16 @@ footer .info .links .icons .icon{
 
 footer .info .links .icons .icon:hover{
   transform: scale(1.25);
-  color: #990FBF;
+  
+}
+
+footer .repository{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .repository .icon{
+  font-size: 30px;
 }
