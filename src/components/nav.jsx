@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import { Logo } from "./link";
 export function Navegator() {
   return (
-    <header>
+    <header className="navWeb">
       <Logo />
       <CiYoutube className="iconDeco" />
 

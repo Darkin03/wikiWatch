@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway:wght@100&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100&family=Roboto&display=swap');
 
 *{
   margin: 0;
@@ -22,59 +22,69 @@ a:visited{
 header{
   padding: 7px 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  padding: 7px 10px;
+  font-family: 'Bebas Neue', cursive;
 }
 
-header .logo{
-  font-family: 'Roboto', sans-serif;
+.navWeb .logo{
   display: flex;
   align-items: center;
   gap: 5px;
+  background-image: linear-gradient(45deg, #5204BF 9%, #990FBF 53%);
+  border-radius: 20px;
+  padding: 0px 7px;
 }
 
-header .logo .icon{
+.navWeb .logo .icon{
   font-size: 40px;
 }
 
-Header .logo .title {
+.navWeb .logo .title {
   display: flex;
-  gap:2px;
+  gap: 7px;
 }
 
-Header .logo .title span{
-  border-radius: 20PX 5px 20px 5px;
-  padding: 2px 7px;
-  background-color: #990FBF;
-}
 
-header .iconDeco{
-  font-size: 50px;
+
+.navWeb .iconDeco{
+  font-size: 35px;
   transition: 500ms;
+  border-radius: 100%;
 }
 
-header .iconDeco:hover{
+.navWeb .iconDeco:hover{
   transform: scale(1.25);
-  color: blueviolet;
+  background-image: linear-gradient(45deg, #5204BF 9%, #990FBF 53%);
+  color: #5D04D9;
+  box-shadow: 2px 2px 13px #990FBF;
 }
 
-header nav {
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+.navWeb nav {
+  font-size: 28px;
   display: flex;
   gap:15px;
 }
 
-header nav .link{
+.navWeb nav .link{
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 3.5px;
 }
 
-header nav .link.active {
+.navWeb nav .link .icon {
+  transition: 500ms;
+}
+
+.navWeb nav .link.active {
+  text-shadow: 2.4px 2.4px #990FBF;
+}
+
+.navWeb nav .link.active .icon{
   color: #990FBF;
-  text-shadow: 0.5px 0.5px white;
-  border-bottom: 2px solid #990FBF;
+  transform: scale(1.4);
 }
 
 
