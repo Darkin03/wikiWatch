@@ -1,5 +1,5 @@
 //import icons
-import { MdTheaters, MdBookmarks } from "react-icons/md";
+import { MdTheaters } from "react-icons/md";
 import { CiMonitor, CiYoutube } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
