@@ -1,76 +1,87 @@
-//import data
-import { latestMovie } from "../data/movies";
+import { useEffect, useState } from "react";
 //import style
 import "../style/Movies.css";
 //import icons
 import { CiStar, CiRead, CiMedal } from "react-icons/ci";
 //import image
 import cinePhoto from "../images/pexels-tima-miroshnichenko-7991378.jpg";
-
-
-
+//import data
+import { getLatest } from "../data/movies";
 
 export function LatestMovie() {
+  //info of the latest movie
+  const [latest, setLatest] = useState({});
+
+  useEffect(() => {
+    async function fetchData() {
+      const latest = await getLatest();
+      setLatest(latest);
+    }
+    fetchData();
+  }, []);
+
   return (
     <section className="latestMovie">
       <div className="imageContainer">
         <img
           src={
-            latestMovie.poster_path == undefined
+            latest.poster_path == undefined
               ? cinePhoto
-              : "https://image.tmdb.org/t/p/original" + latestMovie.poster_path
+              : "https://image.tmdb.org/t/p/original" + latest.poster_path
           }
         />
-      </div>
-
-      <article className="info">
-      <header>New Movie!</header>
-        <div className="titleContainer">
-          <h1 className="title">{latestMovie.title}</h1>
-          {latestMovie.adult ? (
-            <span className="genre">+18</span>
+        <article className="info">
+          <div className="titleContainer">
+            <h1 className="title">{latest.title}</h1>
+            {latest.adult ? (
+              <span className="genre">+18</span>
+            ) : (
+              <span className="genre">Family</span>
+            )}
+          </div>
+          {latest.overview === "" ? (
+            <p className="">No description</p>
           ) : (
-            <span className="genre">Family</span>
+            <p className="description">{latest.overview}</p>
           )}
-        </div>
-        <p>{latestMovie.overview}</p>
-        <div className="notes">
+          <div className="notes">
           <div className="note">
             <CiRead className="icon" />
             <span className="text">
               <p>Popularity</p>
-              {latestMovie.popularity}
+              {latest.popularity}
             </span>
           </div>
           <div className="note">
             <CiStar className="icon" />
             <span className="text">
               <p>Vote Averague</p>
-              {latestMovie.vote_average}
+              {latest.vote_average}
             </span>
           </div>
           <div className="note">
             <CiMedal className="icon" />
             <span className="text">
               <p>Vote Count</p>
-              {latestMovie.vote_count}
+              {latest.vote_count}
             </span>
           </div>
         </div>
+        
         <section className="genresInfo">
         <h1>Geners</h1>
-        <div className="genresContainer">
-          {
-            (latestMovie.genres.length === 0)?
-              <span className="genre">No geners defined</span>
-              : 
-              latestMovie.genres.map((genre) => {
-                <span className="genre" >{genre}</span>
-              })
-          }
+        <div className="genresContainer"> 
+            {
+                latest.genres?.map((genre)=>{
+                    return(
+                        <span key={latest.genres.indexOf(genre) } className="genre">{genre.name}</span>
+                    )
+                })
+            }
         </div>
         </section>
-      </article>
+        </article>
+      </div>
     </section>
   );
 }
