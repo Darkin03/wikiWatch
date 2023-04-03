@@ -30,21 +30,27 @@ export function LatestMovie() {
               : "https://image.tmdb.org/t/p/original" + latest.poster_path
           }
         />
-        <article className="info">
-          <div className="titleContainer">
-            <h1 className="title">{latest.title}</h1>
-            {latest.adult ? (
-              <span className="genre">+18</span>
-            ) : (
-              <span className="genre">Family</span>
-            )}
-          </div>
-          {latest.overview === "" ? (
-            <p className="">No description</p>
+      </div>
+
+      <article className="info">
+        <header>New Movie!</header>
+        
+        <div className="titleContainer">
+          <h1 className="title">{latest.title}</h1>
+          {latest.adult ? (
+            <span className="genre">+18</span>
           ) : (
-            <p className="description">{latest.overview}</p>
+            <span className="genre">Family</span>
           )}
-          <div className="notes">
+        </div>
+
+        {latest.overview === "" ? (
+          <p className="">No description</p>
+        ) : (
+          <p className="description">{latest.overview}</p>
+        )}
+
+        <div className="notes">
           <div className="note">
             <CiRead className="icon" />
             <span className="text">
@@ -67,21 +73,20 @@ export function LatestMovie() {
             </span>
           </div>
         </div>
-        
+
         <section className="genresInfo">
-        <h1>Geners</h1>
-        <div className="genresContainer"> 
-            {
-                latest.genres?.map((genre)=>{
-                    return(
-                        <span key={latest.genres.indexOf(genre) } className="genre">{genre.name}</span>
-                    )
-                })
-            }
-        </div>
+          <h1>Geners</h1>
+          <div className="genresContainer">
+            {latest.genres?.map((genre) => {
+              return (
+                <span key={latest.genres.indexOf(genre)} className="genre">
+                  {genre.name}
+                </span>
+              );
+            })}
+          </div>
         </section>
-        </article>
-      </div>
+      </article>
     </section>
   );
 }
