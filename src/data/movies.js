@@ -27,5 +27,3 @@ const links = {
 
   return moviesLatest;
 };
-
-
