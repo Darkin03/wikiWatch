@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100&family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.homePage{
+    text-align: center;
+    padding: 20px 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.homePage .title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    color: #990FBF;
+    text-shadow: 1px 1px 0.5px aliceblue;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    display: wrap;
+    padding: 7px 10px;
+    gap:25px;
+}
+
+.buttons .button{
+    padding: 4px 10px;
+    border-radius: 16px;
+    border: none;
+    font-size: 20px;
+    background-color: #990FBF;
+    color: aliceblue;
+    transition: 500ms;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.buttons .button:hover{
+    box-shadow: 1px 1px 25px #990FBF,
+                1px 1px aliceblue
+    ;
+}
+
+.iconsHome{
+    
+    position: absolute;
+    font-size: 200px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    color: #990FBF;
+}
+
+@keyframes rotateIcon {
+    from { transform: rotate(0);}
+    to{ transform: rotate(360deg);}
+}
+
+.iconsHome .icon1 , .icon2 , .icon3{
+    position: inherit;
+    animation-name: rotateIcon;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-direction: linear;
+    animation-iteration-count: infinite;
+}
+
+.iconsHome .icon1{
+    right: 0;
+    top: -50px;
+}
+
+.iconsHome .icon2{
+    right: 35%;
+    top: 100px;
+}
+.wabe{
+    position: relative;
+    top: 5px;
+}
