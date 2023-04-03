@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100&family=Roboto&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #130626;
+  color: aliceblue;
+}
+
+a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+a:visited{
+  color: aliceblue;
+}
+
+header{
+  padding: 7px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7px 10px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.navWeb .logo{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-image: linear-gradient(45deg, #5204BF 9%, #990FBF 53%);
+  border-radius: 20px;
+  padding: 0px 7px;
+}
+
+.navWeb .logo .icon{
+  font-size: 40px;
+}
+
+.navWeb .logo .title {
+  display: flex;
+  gap: 7px;
+}
+
+
+
+.navWeb .iconDeco{
+  font-size: 35px;
+  transition: 500ms;
+  border-radius: 100%;
+}
+
+.navWeb .iconDeco:hover{
+  transform: scale(1.25);
+  background-image: linear-gradient(45deg, #5204BF 9%, #990FBF 53%);
+  color: #5D04D9;
+  box-shadow: 2px 2px 13px #990FBF;
+}
+
+.navWeb nav {
+  font-size: 28px;
+  display: flex;
+  gap:15px;
+}
+
+.navWeb nav .link{
+  display: flex;
+  align-items: center;
+  gap: 3.5px;
+}
+
+.navWeb nav .link .icon {
+  transition: 500ms;
+}
+
+.navWeb nav .link.active {
+  text-shadow: 2.4px 2.4px #990FBF;
+}
+
+.navWeb nav .link.active .icon{
+  color: #990FBF;
+  transform: scale(1.4);
+}
+
+
+footer{
+  background-image: radial-gradient(circle, #990FBF 0%, #130626 97%);
+  padding: 15px 7px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+footer .info {
+  padding: 7px 10px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+footer .info .image img{
+  height: 200px;
+  width: 200px;
+}
+
+footer .info .links{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+footer .info .links .title{
+  font-family: 'Bebas Neue', cursive;
+}
+
+footer .info .links .icons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+footer .info .links .icons .icon{
+  font-size: 36px;
+  transition: 500ms;
+}
+
+footer .info .links .icons .icon:hover{
+  transform: scale(1.25);
+  
+}
+
+footer .repository{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .repository .icon{
+  font-size: 30px;
+}

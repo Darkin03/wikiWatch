@@ -1,0 +1,19 @@
+.mediaCard header {
+    display: flex;
+    padding: 5px 20px;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+.mediaCard header .title{
+    text-shadow: 3px 3px #990FBF;
+}
+
+.mediaCard header .link {
+    background-image: linear-gradient(45deg, #5204BF 9%, #990FBF 53%);
+    border-radius: 20px;
+    padding: 0px 7px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
